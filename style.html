@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Style</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            animation: slideIn 1s ease-out;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            animation: slideUp 1s ease-out;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Ticketing System</h1>
+    </header>
+    <main>
+        <div class="container">
+            <p>This is a simple styled page.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Ticketing System</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            const footer = document.querySelector('footer');
+
+            header.style.animation = 'slideIn 1s ease-out';
+            footer.style.animation = 'slideUp 1s ease-out';
+        });
+    </script>
+    <script>
+        window.onload = function() {
+            document.body.style.transition = 'opacity 1s';
+            document.body.style.opacity = 1;
+        };
+        document.body.style.opacity = 0;
+    </script>
+</body>
+</html>
